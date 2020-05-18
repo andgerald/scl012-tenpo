@@ -26,11 +26,7 @@ const useStyle = makeStyles((theme) => ({
       width: '19em',
       left: 22,
     },
-    "&.makeStyles-paper-60":{
-      width:'100%',
-      padding:'40px',
-      left:'40%',
-    }
+    
   
 } }));
 
@@ -50,13 +46,17 @@ function getModalStyle() {
   
 const useStyles = makeStyles(theme => ({
   paper: {
-    width: 313,
+    width: 400,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[3],
     padding: theme.spacing(5),
     outline: 'none',
     position:"absolute",
-  
+    
+  },
+  "&.makeStyles-paper-60":{
+    padding:'40px',
+    left:'20%',
   },
 }));
 function SimpleModal() {
