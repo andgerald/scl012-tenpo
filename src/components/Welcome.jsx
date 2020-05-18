@@ -24,7 +24,9 @@ const Welcome = () => {
                 <Link to="/registrarse">
                     <ButtonPrimary title='Crear Usuario'/>
                 </Link>
+               
                 <button className='sigIn-btn'>Iniciar Sesión</button>
+                
             </div>
         </div>
     )

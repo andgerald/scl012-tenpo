@@ -4,6 +4,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import ButtonPrimary from './ButtonPrimary';
 import TextField from '@material-ui/core/TextField';
+import { Link } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import adelante from '../assets/img/adelante.png'
 import detras from '../assets/img/detras.png'
@@ -48,6 +50,7 @@ function getModalStyle() {
   
 const useStyles = makeStyles(theme => ({
   paper: {
+    width: 313,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[3],
     padding: theme.spacing(5),
@@ -120,7 +123,11 @@ const Id = () => {
         label="Acepto conforme los terminos y condiciones del servicio."
         labelPlacement="end"
       />
-      <ButtonPrimary  title='CONTINUAR'/>
+        <div className='id-btn'>
+          <Link to="/data">
+            <ButtonPrimary title='CONTINUAR'/>
+          </Link>
+        </div>
     </div>
   )
 }

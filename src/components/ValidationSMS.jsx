@@ -41,21 +41,21 @@ const ValidationWS = () => {
     return (
         <>
         <div className='container-validationWS'>
-            <h1>Ingresa tu numero de celular</h1>
-            <p>Te enivaremos un codigo para validar el numero.</p>
+            <h1>Te hemos enviado un SMS</h1>
+            <p>Ingresa a continuación el código que te enviamos.</p>
           <form className={classes.root} noValidate autoComplete="off">
               <div className='container-clave'>
-                  <TextField id="standard-basic" label="+569" />
+                  <TextField id="standard-basic" label="Ingrese código de 6 dígitos" />
                   <img src={mic}/>
               </div>
           </form>
         </div>
         <div className='validation-buttons'>
-            <Link to='/ws'>
-            <ButtonPrimary title='VALIDAR POR  WHATSAPP'/>
+            <Link to='/validarWS'>
+              <button className='enviar-codigo'>ENVIAR CODIGO DE NUEVO</button>
             </Link>
-            <Link to="/sms">
-                <ButtonPrimary title='VALIDAR POR SMS'/>
+            <Link to="/home">
+                <ButtonPrimary title='Continuar'/>
             </Link>
           </div>
       </>
