@@ -26,7 +26,8 @@ const useStyle = makeStyles((theme) => ({
     },
     "&.makeStyles-paper-60":{
       width:'100%',
-      padding:'40px'
+      padding:'40px',
+      left:'40%',
     }
   
 } }));
