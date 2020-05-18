@@ -4,8 +4,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import ButtonPrimary from './ButtonPrimary';
 import TextField from '@material-ui/core/TextField';
-import { Button } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import adelante from '../assets/img/adelante.png'
 import detras from '../assets/img/detras.png'
@@ -26,6 +24,11 @@ const useStyle = makeStyles((theme) => ({
       width: '19em',
       left: 22,
     },
+    "&.makeStyles-paper-60":{
+      width:'100%',
+      padding:'40px'
+    }
+  
 } }));
 
 function rand() {
@@ -44,24 +47,22 @@ function getModalStyle() {
   
 const useStyles = makeStyles(theme => ({
   paper: {
-    width: 400,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[3],
     padding: theme.spacing(5),
     outline: 'none',
     position:"absolute",
-    right:20,
+  
   },
 }));
 function SimpleModal() {
   const [open, setOpen] = React.useState(false);
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
-  const classes = useStyles();
   return (
-    <div >
-      <img src={adelante}/>
-      <img src={detras}/>
+    <div className='container-rut'>
+      <img className='img-rut' src={adelante}/>
+      <img className='img-rut' src={detras}/>
     </div>
       
   );
